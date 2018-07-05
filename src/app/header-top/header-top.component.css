@@ -1,0 +1,8 @@
+.header-top-container{
+    border: solid 1px #ddd;
+    height: 100px;
+}
+.container{
+    border: solid 1px #ddd;
+    height: 100%;
+}

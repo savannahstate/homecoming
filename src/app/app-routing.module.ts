@@ -1,3 +1,4 @@
+import { EventsComponent } from './events/events.component';
 import { ContactComponent } from './contact/contact.component';
 import { CoronationComponent } from './coronation/coronation.component';
 import { HomeComponent } from './home/home.component';
@@ -9,7 +10,8 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home'},
   { path: 'home', component: HomeComponent, data: {title: 'Home'}},
   { path: 'coronation', component: CoronationComponent, data: {title: 'Coronation'}},
-  { path: 'contact', component: ContactComponent, data: {title: 'Contact'}}
+  { path: 'contact', component: ContactComponent, data: {title: 'Contact'}},
+  { path: 'events', component: EventsComponent, data: {title: 'Events'}}
 ];
 
 @NgModule({

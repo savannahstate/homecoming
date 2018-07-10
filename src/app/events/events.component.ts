@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
-public searchVariable: String = "all";
+public searchTypeVariable: String = "current";
+public searchTermVariable: String = "current";
 
   constructor() { }
 

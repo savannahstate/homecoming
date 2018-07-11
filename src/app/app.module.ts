@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderTopComponent } from './header-top/header-top.component';
@@ -13,7 +14,13 @@ import { CoronationComponent } from './coronation/coronation.component';
 import { ContactComponent } from './contact/contact.component';
 import { EventsComponent } from './events/events.component';
 import { EventsViewComponent } from './events-view/events-view.component';
+import { EventDetailsComponent } from './events/event-details.component';
+import { EventsService } from './services/events.service';
+import { AgmCoreModule } from '@agm/core';
 
+export function EventServiceFactory(provider: EventsService) {
+  return () => provider.load();
+}
 
 @NgModule({
   declarations: [
@@ -26,14 +33,18 @@ import { EventsViewComponent } from './events-view/events-view.component';
     CoronationComponent,
     ContactComponent,
     EventsComponent,
-    EventsViewComponent
+    EventsViewComponent,
+    EventDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    HttpClientModule,
+    AgmCoreModule.forRoot({apiKey: 'AIzaSyCb9ARobCKWam-pHhh3pBCyekvDlNMtQis' })
   ],
-  providers: [],
+  providers: [ EventsService,
+    { provide: APP_INITIALIZER, useFactory: EventServiceFactory, deps: [EventsService], multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

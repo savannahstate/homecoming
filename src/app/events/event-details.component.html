@@ -1,0 +1,21 @@
+<div *ngIf="!eventError">
+<img src={{bannerImage}}>
+<h1>{{event?.name}}</h1>
+<p>{{event?.dateStart | date:'M/d/y h:mm a'}}</p>
+<p>{{event?.dateEnd | date:'M/d/y h:mm a'}}</p>
+<p>{{event?.description}}</p>
+<p>{{event?.location?.name}}</p>
+<p>{{event?.location?.address}}</p>
+<p>{{event?.audience}}</p>
+<p *ngFor="let price of event.prices">{{price.description}} - {{price.amount | currency:USD}}</p>
+<p>{{event?.additional}}</p>
+<a *ngFor="let link of event.links" href="{{link.url}}">{{link.text}}</a>
+<p *ngFor="let contact of event.contacts">{{contact.name}} - {{contact.info}}</p>
+
+<agm-map *ngIf="event?.location?.latitude" [latitude]="event?.location?.latitude" [longitude]="event?.location?.longitude" [zoom]="18">
+    <agm-marker [latitude]="event?.location?.latitude" [longitude]="event?.location?.longitude" ></agm-marker>
+  </agm-map>
+</div>
+<div *ngIf="eventError">
+    ERROR
+</div>

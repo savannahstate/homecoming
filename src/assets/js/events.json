@@ -1,10 +1,10 @@
 [
   {
-    "id": 1,
+    "eventId": 1,
     "name": "Homecoming Parade",
-    "date": "2017-10-07T09:00:00-04:00",
+    "dateStart": "2017-10-07T09:00:00-04:00",
     "description": "Annual SSU homecoming parade through the streets of downtown Savannah.",
-    "timeModifier": "",
+    
     "location": "Downtown Savannah",
     "audience": "All",
     "price": "free",
@@ -17,14 +17,14 @@
     ]
   },
   {
-    "id": 2,
+    "eventId": 2,
     "name": "Homecoming Football Game",
-    "date": "2019-10-07T14:00:00-04:00",
-    "description": "Watch our Savannah State University Tigers face the Hampton University Pirates.",
-    "timeModifier": "",
-    "location": "T.A. Wright Stadium",
+    "dateStart": "2018-10-27T15:00:00-04:00",
+    "dateEnd": "2018-10-27T18:00:00-04:00",
+    "description": "Watch our Savannah State University Tigers face the Norfolk State University Spartans.",
+    "location": {"name": "T.A. Wright Stadium","address":"13 Main st.","latitude":32.027593,"longitude":-81.068636},
     "audience": "All",
-    "price": "$15-30",
+    "prices": [{"description":"General Admission","amount":15}],
     "addtional": "",
     "links": [
       {
@@ -38,11 +38,11 @@
     ]
   },
   {
-    "id": 3,
+    "eventId": 3,
     "name": "Homecoming Golf Classic",
-    "date": "2017-10-06T07:30:00-04:00",
+    "dateStart": "2017-10-06T07:30:00-04:00",
     "description": "Call 912-358-3062, email phil@savannahstate.edu or click the link below to register.",
-    "timeModifier": "",
+    
     "location": "Crosswinds Golf Club",
     "audience": "All",
     "price": "$125 per Golfer",
@@ -63,109 +63,65 @@
     ]
   },
   {
-    "id": 25,
+    "eventId": 25,
     "name": "Ecumenical Service",
-    "date": "2017-10-01T17:00:00-04:00",
+    "dateStart": "2017-10-01T17:00:00-04:00",
     "description": "",
-    "timeModifier": "",
+    
     "location": "Student Union Ballroom",
     "audience": "All",
     "price": "free",
     "addtional": "",
     "links": []
   },
+
   {
-    "id": 18,
-    "name": "Lecture Series Game Show",
-    "date": "2017-10-02T19:00:00-04:00",
-    "description": "",
-    "timeModifier": "",
-    "location": "Tiger Arena",
-    "audience": "All",
-    "price": "$5",
-    "addtional": "",
-    "links": []
-  },
-  {
-    "id": 19,
+    "eventId": 19,
     "name": "Residential Step Show",
-    "date": "2017-10-03T20:00:00-04:00",
+    "dateStart": "2017-10-03T20:00:00-04:00",
     "description": "This annual step show promotes collaboration and pride within residence halls by showcasing Tiger participation, interaction and diversity.",
-    "timeModifier": "",
+    
     "location": "Tiger Arena",
     "audience": "All",
     "price": "$5",
     "addtional": "",
     "links": []
   },
+  
   {
-    "id": 419,
-    "name": "Fashion Show Competition",
-    "date": "2017-10-04T20:00:00-04:00",
-    "description": "Fashion Show Competition with a special performance by Yo Gotti.",
-    "timeModifier": "",
-    "location": "Tiger Arena",
-    "audience": "All",
-    "price": "$20",
-    "addtional": "",
-    "links": []
-  },
-  {
-    "id": 21,
+    "eventId": 21,
     "name": "Campus Parade",
-    "date": "2017-10-06T12:00:00-04:00",
+    "dateStart": "2017-10-06T12:00:00-04:00",
     "description": "",
-    "timeModifier": "",
+    
     "location": "Alexis Circle",
     "audience": "All",
     "price": "Free",
     "addtional": "",
     "links": []
   },
+ 
   {
-    "id": 421,
-    "name": "YardFest Takeover",
-    "date": "2017-10-06T11:00:00-04:00",
-    "description": "",
-    "timeModifier": "",
-    "location": "Alexis Circle",
-    "audience": "All",
-    "price": "Free",
-    "addtional": "",
-    "links": []
-  },
-  {
-    "id": 22,
+    "eventId": 22,
     "name": "Pep Rally",
-    "date": "2017-10-06T20:00:00-04:00",
+    "dateStart": "2017-10-06T20:00:00-04:00",
     "description": "",
-    "timeModifier": "",
+    
     "location": "Tiger Arena",
     "audience": "All",
     "price": "$5",
     "addtional": "",
     "links": []
   },
-  {
-    "id": 24,
-    "name": "Greek Step Show & After Party",
-    "date": "2017-10-07T20:00:00-04:00",
-    "description": "",
-    "timeModifier": "",
-    "location": "Tiger Arena",
-    "audience": "All",
-    "price": "$20",
-    "addtional": "",
-    "links": []
-  },
+ 
 
 
   {
-    "id": 4,
+    "eventId": 4,
     "name": "Volleyball Game",
-    "date": "2017-10-01T01:00:00-16:00",
+    "dateStart": "2017-10-01T01:00:00-16:00",
     "description": "Cheer on our Savannah State University Lady Tigers against the Florida A&M University Rattlers.",
-    "timeModifier": "",
+    
     "location": "Willcox-Wiley Gymnasium",
     "audience": "All",
     "price": "free",
@@ -178,117 +134,13 @@
     ]
   },
 
-
-
-
+  
   {
-    "id": 400,
-    "name": "Historical Walk",
-    "date": "2017-10-05T08:00:00-04:00",
-    "description": "Historical walk down memory lane. Sponsored by the SSU National Alumni Association.",
-    "timeModifier": "",
-    "location": "Willcox-Wiley Gymnasium",
-    "audience": "All",
-    "price": "free",
-    "addtional": "",
-    "links": []
-  },
-
-  {
-    "id": 401,
-    "name": "Alumni Registration",
-    "date": "2017-10-05T14:00:00-04:00",
-    "description": "",
-    "timeModifier": "",
-    "location": "Marriott Savannah Riverfront Hotel",
-    "audience": "Alumni",
-    "price": "free",
-    "addtional": "",
-    "links": [
-      {
-        "text": "More Info",
-        "url": "http://ssunaa.org/events/event/homecoming-weekend/"
-      }
-    ]
-  },
-  {
-    "id": 402,
-    "name": "Alumni Registration",
-    "date": "2017-10-06T14:00:00-04:00",
-    "description": "",
-    "timeModifier": "",
-    "location": "Marriott Savannah Riverfront Hotel",
-    "audience": "Alumni",
-    "price": "free",
-    "addtional": "",
-    "links": [
-      {
-        "text": "More Info",
-        "url": "http://ssunaa.org/events/event/homecoming-weekend/"
-      }
-    ]
-  },
-  {
-    "id": 403,
-    "name": "SSUNAA Game Night",
-    "date": "2017-10-07T20:00:00-04:00",
-    "description": "SSU National Alumni Association presents Game Night with prizes.",
-    "timeModifier": "",
-    "location": "Marriott Savannah Riverfront Hotel",
-    "audience": "Alumni",
-    "price": "$30 or free with package",
-    "addtional": "",
-    "links": [
-      {
-        "text": "More Info",
-        "url": "http://ssunaa.org/events/event/homecoming-weekend/"
-      }
-    ]
-  },
-  {
-    "id": 9,
-    "name": "Coronation of Mister and Miss SSU",
-    "date": "2017-10-05T20:00:00-04:00",
-    "description": "",
-    "timeModifier": "",
-    "location": "Tiger Arena",
-    "audience": "All",
-    "price": "free",
-    "addtional": "",
-    "links": []
-  },
-  {
-    "id": 16,
-    "name": "Worship Service",
-    "date": "2017-10-08T08:00:00-04:00",
-    "description": "SSU National Alumni Association will host this worship service",
-    "timeModifier": "",
-    "location": "Marriott Savannah Riverfront Hotel",
-    "audience": "All",
-    "price": "free",
-    "addtional": "",
-    "links": []
-  },
-  {
-    "id": 11,
-    "name": "Fish Fry",
-    "date": "2017-10-06T12:00:00-04:00",
-    "description": "Annual SSU National Alumni Association fish fry.",
-    "timeModifier": "",
-    "location": "Alexis Circle",
-    "audience": "All",
-    "price": "free",
-    "addtional": "",
-    "links": [
-
-    ]
-  },
-  {
-    "id": 7,
+    "eventId": 7,
     "name": "Alumni Return to Campus Forum",
-    "date": "2017-10-05T12:00:00-04:00",
+    "dateStart": "2017-10-05T12:00:00-04:00",
     "description": "",
-    "timeModifier": "",
+    
     "location": "Student Union",
     "audience": "Students, alumni, faculty, & staff",
     "price": "free",
@@ -296,110 +148,19 @@
     "links": []
   },
   {
-    "id": 444,
+    "eventId": 444,
     "name": "President's Class Reunion Brunch",
-    "date": "2017-10-06T10:00:00-04:00",
+    "dateStart": "2017-10-06T10:00:00-04:00",
     "description": "",
-    "timeModifier": "",
+    
     "location": "Gardner Hall",
     "audience": "Alumni",
     "price": "",
     "addtional": "",
     "links": []
-  },
-  {
-    "id": 8,
-    "name": "Crowning Ceremony of National Alumni Queen",
-    "date": "2017-10-05T17:00:00-04:00",
-    "description": "The crowning of the new SSUNAA Queen and her court along with chapter queens will be announced.",
-    "timeModifier": "",
-    "location": "Asa Gordon Library",
-    "audience": "Alumni",
-    "price": "free",
-    "addtional": "",
-    "links": [
-
-    ]
-  },
-  {
-    "id": 12,
-    "name": "SSUNAA Information Session",
-    "date": "2017-10-06T15:00:00-04:00",
-    "description": "Get information about the SSU National Alumni Association at this meeting.",
-    "timeModifier": "",
-    "location": "",
-    "audience": "All",
-    "price": "free",
-    "addtional": "",
-    "links": [
-
-    ]
-  },
-  {
-    "id": 13,
-    "name": "SSUNAA Homecoming Gala",
-    "date": "2017-10-06T18:00:00-04:00",
-    "description": "SSU National Alumni Association will give awards to alumni, alumni chapters and honorees (Life members).",
-    "timeModifier": "",
-    "location": "Marriott Savannah Riverfront Hotel",
-    "audience": "All",
-    "price": "$80 or $175 for package",
-    "addtional": "",
-    "links": [
-      {
-        "text": "More Info",
-        "url": "http://ssunaa.org/events/event/homecoming-weekend/"
-      }
-    ]
-  },
-  {
-    "id": 27,
-    "name": "Blue & Orange 5K Race",
-    "date": "2017-10-06T06:00:00-04:00",
-    "description": "This year's 5k will feature your fun costumes and treats from us! The run around campus will begin and end at T. A. Wright Stadium.",
-    "timeModifier": "",
-    "location": "T. A. Wright Stadium",
-    "audience": "All",
-    "price": "TBD",
-    "addtional": "",
-    "links": [
-      {
-        "text": "Register",
-        "url": "http://www.ssu5k.org/"
-      }
-    ]
-  },
-  {
-    "id": 4440,
-    "name": "NROTC Leadership Panel",
-    "date": "2017-10-05T13:00:00-04:00",
-    "description": "Leadership Navigation for the Future",
-    "timeModifier": "",
-    "location": "King Frazier Auditorium",
-    "audience": "All",
-    "price": "Free",
-    "addtional": ""
-  },
-  {
-    "id": 4441,
-    "name": "NROTC Reunion Banquet",
-    "date": "2017-10-05T18:00:00-04:00",
-    "description": "Business attire",
-    "timeModifier": "",
-    "location": "Student Union Ballroom",
-    "audience": "NROTC Alumni, family and friends",
-    "price": "$50 per person",
-    "addtional": ""
-  },
-  {
-    "id": 4442,
-    "name": "NROTC Speed Mentoring",
-    "date": "2017-10-05T14:30:00-04:00",
-    "description": "",
-    "timeModifier": "",
-    "location": "King Frazier Auditorium",
-    "audience": "All",
-    "price": "Free",
-    "addtional": ""
   }
+ 
+  
+  
+  
 ]

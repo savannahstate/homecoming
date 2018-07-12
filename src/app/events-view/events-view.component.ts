@@ -22,19 +22,20 @@ export class EventsViewComponent implements OnInit {
   constructor(private http:Http) { }
 
   ngOnInit() {
-    this.searchAndSetEvents(this.searchType,this.searchTerm);
+    //this.searchAndSetEvents(this.searchType,this.searchTerm);
   }
+}
 
-  searchAndSetEvents(eventsSearchType:string,searchTerm:string):any{
+  /*searchAndSetEvents(eventsSearchType:string,searchTerm:string):any{
     const jsonUrl = './../../assets/js/events.json';
     const defaultError = {name:"No events found"};
     const currentError = {name:"No current events to display"};
     const searchError = {name:"No events found, try again"};
 
-    this.http.get(jsonUrl).toPromise().then(results =>{
+  /*this.http.get(jsonUrl).toPromise().then(results =>{
       
       switch(eventsSearchType){
-        case "all":
+        /*case "all":
           this.searchResults = results.json();
         break;
         case "current":
@@ -50,7 +51,7 @@ export class EventsViewComponent implements OnInit {
           break;
         /*case "dateRange":
           this.searchResults = results.json();
-        break;*/
+        break;
         case "search":
           const regex = new RegExp(".*" + searchTerm + ".*","gi");
             results.json().forEach((key) =>{
@@ -62,7 +63,7 @@ export class EventsViewComponent implements OnInit {
                 this.searchResults.push(searchError);
               };
           break;
-        default:
+        /default:
           //display no results message
           this.searchResults.push(defaultError);
           console.log('default triggered, one of the parameters may be incorrect');
@@ -73,4 +74,4 @@ export class EventsViewComponent implements OnInit {
     }).catch(error => console.log(error));
   };
 
-}
+}*/

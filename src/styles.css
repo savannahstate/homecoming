@@ -1,7 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
-h1{
-    text-align: center;
+body {
+  color: #fff;
+  background-color: black;
+  background-image: url("/assets/images/blurry-cheerleader.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-h2{
-    color: #1F529A;
+
+.extraLgText{
+    font-size: 3.5rem;
+}
+
+.subTitle{
+    font-size: 40px;
+}
+
+.main-content {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top:15px;
+  padding-bottom:15px;
+  margin-top:15px;
+}
+
+.event div {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px 10px 30px 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.event img{
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.call-to-action {
+  color: #d43900;
+  font-weight: bold;
+  border: solid 1px;
+  padding: 5px 10px;
+  display: inline-block;
+  background-color: #000000;
+}
+
+.call-to-action:hover{
+    color: #fff;
+    background-color: #d43900;
+    text-decoration: none;
+    border-color:  #d43900;
+}
+
+.call-to-action-lg{
+    font-size: 24px;
+    padding: 10px 20px;
+}
+
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 50px;
 }

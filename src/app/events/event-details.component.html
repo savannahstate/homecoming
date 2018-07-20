@@ -1,21 +1,46 @@
-<div *ngIf="!eventError">
-<img src={{bannerImage}}>
-<h1>{{event?.name}}</h1>
-<p>{{event?.dateStart | date:'M/d/y h:mm a'}}</p>
-<p>{{event?.dateEnd | date:'M/d/y h:mm a'}}</p>
-<p>{{event?.description}}</p>
-<p>{{event?.location?.name}}</p>
-<p>{{event?.location?.address}}</p>
-<p>{{event?.audience}}</p>
-<p *ngFor="let price of event.prices">{{price.description}} - {{price.amount | currency:USD}}</p>
-<p>{{event?.additional}}</p>
-<a *ngFor="let link of event.links" href="{{link.url}}">{{link.text}}</a>
-<p *ngFor="let contact of event.contacts">{{contact.name}} - {{contact.info}}</p>
-
-<agm-map *ngIf="event?.location?.latitude" [latitude]="event?.location?.latitude" [longitude]="event?.location?.longitude" [zoom]="18">
-    <agm-marker [latitude]="event?.location?.latitude" [longitude]="event?.location?.longitude" ></agm-marker>
-  </agm-map>
-</div>
-<div *ngIf="eventError">
-    ERROR
+<div *ngIf="_event$ | async as _event">
+    <img width="100%" />
+    <div class="container main-content">
+        <div class="row">
+            <div class="col-md-9" style="padding-bottom:30px;">
+                <h1>{{_event?.name}}</h1>
+                <p>{{_event?.description}}</p>
+                <p><strong>Audience : </strong>{{_event?.audience}}</p>
+                <p>{{_event?.additional}}</p>
+                <p *ngFor="let link of _event.links">
+                    <a class="call-to-action" href="{{link.url}}">{{link.text}}</a>
+                </p>
+                <p *ngFor="let contact of _event.contacts">{{contact.name}} - {{contact.info}}</p>
+            </div>
+            <div class="col-md-3">
+              <div class="calendarItem" style="margin-bottom:15px;">
+                <div class="title">
+                  <h3>{{_event?.dateStart | date:'EE' | uppercase}}</h3>
+                </div>
+                <div class="content">
+                  <h3>{{_event?.dateStart | date:'M/d'}}</h3>
+                  <h4>{{_event?.dateStart | date:'h:mm a'}}<span *ngIf="_event?.dateEnd"> - </span>{{_event?.dateEnd | date:'h:mm a'}}</h4>
+                </div>
+              </div>
+              <strong>PRICES</strong>
+              <p *ngFor="let price of _event.prices">
+                {{price.amount | currency:USD}} - {{price.description}}
+              </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <p>
+                    <strong>{{_event?.location?.name}}</strong>
+                    <br/> {{_event?.location?.address}}
+                </p>
+            </div>
+            <div class="col-md-8">
+                <agm-map *ngIf="_event?.location?.latitude" [latitude]="_event?.location?.latitude" [longitude]="_event?.location?.longitude"
+                    [zoom]="18">
+                    <agm-marker [latitude]="_event?.location?.latitude" [longitude]="_event?.location?.longitude"></agm-marker>
+                </agm-map>
+            </div>
+        </div>
+    </div>
 </div>

@@ -2,17 +2,32 @@
   {
     "eventId": 1,
     "name": "Homecoming Parade",
-    "dateStart": "2017-10-07T09:00:00-04:00",
+    "dateStart": "2018-10-27T09:00:00-04:00",
     "description": "Annual SSU homecoming parade through the streets of downtown Savannah.",
-    
-    "location": "Downtown Savannah",
+    "location": {
+      "name": "Downtown Savannah",
+      "address": "",
+      "latitude": 32.0273425,
+      "longitude": -81.0687014
+    },
     "audience": "All",
-    "price": "free",
+    "prices": [
+      {
+        "description": "General Admission",
+        "amount": 0
+      }
+    ],
     "addtional": "",
     "links": [
       {
         "text": "Parade Information",
         "url": "#/parade"
+      }
+    ],
+    "images": [
+      {
+        "src": "https://www.savannahstate.edu/homecoming/images/parade.jpg",
+        "type": "banner"
       }
     ]
   },
@@ -22,9 +37,23 @@
     "dateStart": "2018-10-27T15:00:00-04:00",
     "dateEnd": "2018-10-27T18:00:00-04:00",
     "description": "Watch our Savannah State University Tigers face the Norfolk State University Spartans.",
-    "location": {"name": "T.A. Wright Stadium","address":"13 Main st.","latitude":32.027593,"longitude":-81.068636},
+    "location": {
+      "name": "T.A. Wright Stadium",
+      "address": "3219 College St, Savannah, GA 31404",
+      "latitude": 32.027593,
+      "longitude": -81.068636
+    },
     "audience": "All",
-    "prices": [{"description":"General Admission","amount":15}],
+    "prices": [
+      {
+        "description": "General Admission",
+        "amount": 20
+      },
+      {
+        "description": "Premium Seating",
+        "amount": 30
+      }
+    ],
     "addtional": "",
     "links": [
       {
@@ -35,17 +64,32 @@
         "text": "Explore Tigers Football",
         "url": "http://ssuathletics.com/index.aspx?tab=football&path=football"
       }
+    ],
+    "images": [
+      {
+        "src": "https://www.savannahstate.edu/homecoming/images/football_smoke.jpg",
+        "type": "banner"
+      }
     ]
   },
   {
     "eventId": 3,
-    "name": "Homecoming Golf Classic",
-    "dateStart": "2017-10-06T07:30:00-04:00",
-    "description": "Call 912-358-3062, email phil@savannahstate.edu or click the link below to register.",
-    
-    "location": "Crosswinds Golf Club",
+    "name": "Scholarship Scramble",
+    "dateStart": "2018-10-26T07:30:00-04:00",
+    "description": "Our goal is to recruit high-achieving students and graduate them within four years. Scholarships frequently make graduation a reality. Net proceeds from the golf tournament will fund scholarships for deserving students as they pursue their education.",
+    "location": {
+      "name": "Crosswinds Golf Club",
+      "address": "232 James B Blackburn Dr, Savannah, GA 31408",
+      "latitude": 32.136506,
+      "longitude": -81.23131
+    },
     "audience": "All",
-    "price": "$125 per Golfer",
+    "prices": [
+      {
+        "description": "Golfer",
+        "amount": 125
+      }
+    ],
     "addtional": "",
     "links": [
       {
@@ -60,107 +104,222 @@
         "text": "Learn more about the Golf Classic",
         "url": "#/golf"
       }
+    ],
+    "images": [
+      {
+        "src": "https://www.savannahstate.edu/homecoming/images/golf.jpg",
+        "type": "banner"
+      }
+    ],
+    "contacts": [
+      {
+        "name": "phil@savannahstate.edu",
+        "type": "email",
+        "info": "phil@savannahstate.edu"
+      },
+      {
+        "name": "912-358-3062",
+        "type": "phone",
+        "info": "912-358-3062"
+      }
     ]
   },
   {
     "eventId": 25,
     "name": "Ecumenical Service",
-    "dateStart": "2017-10-01T17:00:00-04:00",
+    "dateStart": "2018-10-21T17:00:00-04:00",
     "description": "",
-    
-    "location": "Student Union Ballroom",
+    "location": {
+      "name": "Student Union Ballroom",
+      "address": "3219 College St, Savannah, GA 31404",
+      "latitude": 32.022904,
+      "longitude": -81.064068
+    },
     "audience": "All",
-    "price": "free",
+    "prices": [
+      {
+        "description": "General Admission",
+        "amount": 0
+      }
+    ],
     "addtional": "",
     "links": []
   },
-
   {
     "eventId": 19,
     "name": "Residential Step Show",
     "dateStart": "2017-10-03T20:00:00-04:00",
     "description": "This annual step show promotes collaboration and pride within residence halls by showcasing Tiger participation, interaction and diversity.",
-    
     "location": "Tiger Arena",
     "audience": "All",
     "price": "$5",
     "addtional": "",
     "links": []
   },
-  
   {
     "eventId": 21,
     "name": "Campus Parade",
-    "dateStart": "2017-10-06T12:00:00-04:00",
+    "dateStart": "2018-10-26T12:00:00-04:00",
     "description": "",
-    
-    "location": "Alexis Circle",
+    "location": {
+      "name": "Alexis Circle",
+      "address": "3219 College St, Savannah, GA 31404",
+      "latitude": 32.022427,
+      "longitude": -81.056576
+    },
     "audience": "All",
-    "price": "Free",
+    "prices": [
+      {
+        "description": "General Admission",
+        "amount": 0
+      }
+    ],
     "addtional": "",
     "links": []
   },
- 
+  {
+    "eventId": 220,
+    "name": "Coronation Ceremony",
+    "dateStart": "2018-10-25T19:00:00-04:00",
+    "dateEnd": "2018-10-25T21:00:00-04:00",
+    "description": "Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.",
+    "location": {
+      "name": "Tiger Arena",
+      "address": "3219 College St, Savannah, GA 31404",
+      "latitude": 32.023909,
+      "longitude": -81.065666
+    },
+    "audience": "All",
+    "prices": [
+      {
+        "description": "General Admission",
+        "amount": 0
+      }
+    ],
+    "addtional": "",
+    "links": [],
+    "images": [
+      {
+        "src": "https://www.savannahstate.edu/homecoming/images/crown.jpg",
+        "type": "banner"
+      }
+    ]
+  },
+  {
+    "eventId": 210,
+    "name": "Fish Fry",
+    "dateStart": "2018-10-26T12:00:00-04:00",
+    "description": "Annual SSU National Alumni Association fish fry.",
+    "location": {
+      "name": "Alexis Circle",
+      "address": "3219 College St, Savannah, GA 31404",
+      "latitude": 32.022427,
+      "longitude": -81.056576
+    },
+    "audience": "All",
+    "prices": [
+      {
+        "description": "General Admission",
+        "amount": 0
+      }
+    ],
+    "addtional": "",
+    "links": []
+  },
   {
     "eventId": 22,
     "name": "Pep Rally",
     "dateStart": "2017-10-06T20:00:00-04:00",
     "description": "",
-    
-    "location": "Tiger Arena",
+    "location": {
+      "name": "Tiger Arena",
+      "address": "3219 College St, Savannah, GA 31404",
+      "latitude": 32.023909,
+      "longitude": -81.065666
+    },
     "audience": "All",
-    "price": "$5",
+    "prices": [
+      {
+        "description": "General Admission",
+        "amount": 5
+      }
+    ],
     "addtional": "",
     "links": []
   },
- 
-
-
   {
-    "eventId": 4,
-    "name": "Volleyball Game",
-    "dateStart": "2017-10-01T01:00:00-16:00",
-    "description": "Cheer on our Savannah State University Lady Tigers against the Florida A&M University Rattlers.",
-    
-    "location": "Willcox-Wiley Gymnasium",
+    "eventId": 2200,
+    "name": "Greek Step Show & After Party",
+    "dateStart": "2018-10-27T20:00:00-04:00",
+    "description": "",
+    "location": {
+      "name": "Tiger Arena",
+      "address": "3219 College St, Savannah, GA 31404",
+      "latitude": 32.023909,
+      "longitude": -81.065666
+    },
     "audience": "All",
-    "price": "free",
-    "addtional": "",
-    "links": [
+    "prices": [
       {
-        "text": "Learn about the Lady Tigers",
-        "url": "http://ssuathletics.com/index.aspx?tab=volleyball&path=wvball"
+        "description": "General Admission",
+        "amount": 20
       }
-    ]
+    ],
+    "addtional": "",
+    "links": []
+  },
+  {
+    "eventId": 2300,
+    "name": "Worship Service",
+    "dateStart": "2018-10-28T08:00:00-04:00",
+    "description": "SSU National Alumni Association will host this worship service",
+    "location": {
+      "name": "Marriott Savannah Riverfront Hotel",
+      "address": "100 General McIntosh Blvd, Savannah, GA 31401",
+      "latitude": 32.0786,
+      "longitude": -81.0810
+    },
+    "audience": "All",
+    "prices": [
+      {
+        "description": "General Admission",
+        "amount": 0
+      }
+    ],
+    "addtional": "",
+    "links": []
   },
 
-  
+  {
+    "eventId": 4443,
+    "name": "President's Class Reunion Brunch",
+    "dateStart": "2018-10-26T09:00:00-04:00",
+    "description": "Brunch",
+    "location": {
+      "name": "Gardner Hall",
+      "address": "3219 College St, Savannah, GA 31404",
+      "latitude": 32.023157,
+      "longitude": -81.054213
+    },
+    "audience": "Alumni",
+    "prices": [
+      {
+        "description": "Invite Only",
+        "amount": 0
+      }
+    ],
+    "addtional": "",
+    "links": []
+  },
   {
     "eventId": 7,
     "name": "Alumni Return to Campus Forum",
     "dateStart": "2017-10-05T12:00:00-04:00",
     "description": "",
-    
     "location": "Student Union",
     "audience": "Students, alumni, faculty, & staff",
     "price": "free",
     "addtional": "",
     "links": []
-  },
-  {
-    "eventId": 444,
-    "name": "President's Class Reunion Brunch",
-    "dateStart": "2017-10-06T10:00:00-04:00",
-    "description": "",
-    
-    "location": "Gardner Hall",
-    "audience": "Alumni",
-    "price": "",
-    "addtional": "",
-    "links": []
   }
- 
-  
-  
-  
 ]

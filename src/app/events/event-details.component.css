@@ -1,3 +1,25 @@
 agm-map {
     height: 300px;
   }
+.calendarItem {
+  background-color: rgba(255, 255, 255, .7);
+  text-align: center;
+}
+  .calendarItem .title h3 {
+    background-color: #d43900;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 4rem;
+  }
+  .calendarItem .content {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+
+  .calendarItem .content h3 {
+    font-size: 1.5rem;
+  }
+    .calendarItem .content h4 {
+      font-size: 1rem;
+      font-style:italic;
+    }

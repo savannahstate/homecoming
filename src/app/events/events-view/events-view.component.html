@@ -1,0 +1,11 @@
+<div class="event">
+    <img src="https://www.savannahstate.edu/images/savannah_state_university_logo.jpg" alt="Savannah State University" class="img-fluid" />
+
+    <h3>{{event.name}}</h3>
+    <p>
+        <strong>{{event?.dateStart | date:'M/d/y h:mm a'}}</strong>
+        <br/>
+        <em>{{event?.location.name}}</em>
+    </p>
+    <a class="call-to-action" [routerLink]="['/event/',event.name]">LEARN MORE</a>
+</div>

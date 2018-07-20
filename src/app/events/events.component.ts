@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EventsService } from '../services/events.service';
+import { IEvent } from '../models/event';
 
 @Component({
   selector: 'app-events',
@@ -6,13 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent implements OnInit {
-
-public searchTypeVariable: String = "current";
-public searchTermVariable: String = "current";
-
-  constructor() { }
-
+events: IEvent[];
+  constructor(private eventService: EventsService) { }
   ngOnInit() {
+    this.eventService.getEvents().subscribe(events => {this.events = events; }, (err) => {}, () => {});
   }
-
 }

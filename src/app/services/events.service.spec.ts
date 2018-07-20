@@ -11,22 +11,25 @@ describe('EventsService', () => {
     mockHttp = jasmine.createSpyObj('mockHttp', ['get']);
     _events = [{
       eventId: 1,
-      name: 'Test Event',
+      name: 'Birthday',
       dateStart: new Date('1/1/2019'),
       dateEnd: new Date('1/1/2019'),
-      description: 'This is a test description'
+      description: 'These words are different apples',
+      audience: 'All'
     }, {
       eventId: 2,
-      name: 'Test Event 2',
+      name: 'Anniversary',
       dateStart: new Date('1/1/2019'),
       dateEnd: new Date('1/1/2019'),
-      description: 'This is a test description'
+      description: 'Than phrases apple',
+      audience: 'Alumni'
     }, {
       eventId: 3,
-      name: 'Test Event 3',
+      name: 'Holiday',
       dateStart: new Date('1/1/2019'),
       dateEnd: new Date('1/1/2019'),
-      description: 'This is a test description'
+      description: 'In the current sections description bananna',
+      audience: 'Students'
     }];
     eventService = new EventsService(mockHttp, _events);
   });
@@ -41,7 +44,30 @@ describe('EventsService', () => {
   describe('getEventByName', () => {
     it('should get event by name', () => {
       mockHttp.get.and.returnValue(of(true));
-      eventService.getEventByName('Test Event').subscribe(event => {expect(event.eventId).toBe(1); });
+      eventService.getEventByName('Birthday').subscribe(event => {expect(event.eventId).toBe(1); });
+    });
+  });
+
+  describe('search', () => {
+    it('should find events by event name', () => {
+      mockHttp.get.and.returnValue(of(true));
+      eventService.search('day').subscribe(events => {expect(events.length).toBe(2); expect(events[0].name).toBe('Birthday'); });
+    });
+  });
+
+  describe('search', () => {
+    it('should find event by description', () => {
+      mockHttp.get.and.returnValue(of(true));
+      eventService.search('bananna').subscribe(events => { expect(events.length).toBe(1); expect(events[0].name).toBe('Holiday'); });
+    });
+  });
+
+  describe('eventExists', () => {
+    it('should return true', () => {
+      expect(eventService.eventExists("Anniversary")).toBe(true);
+    });
+    it('should return false', () => {
+      expect(eventService.eventExists("Nonexistent event")).toBe(false);
     });
   });
 });

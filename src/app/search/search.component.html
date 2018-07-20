@@ -1,0 +1,10 @@
+<div>
+  <form autocomplete="off" #searchForm="ngForm" (ngSubmit)="search(searchForm.value)">
+    <input type="text" id="searchTerm" (ngModel)="searchTerm" name="searchTerm" placeholder="Search" />
+  </form>
+  <div >
+    <p *ngFor="let result of searchResults">
+      <a (click)="navigate(result.name)">{{result.name}}</a>
+    </p>
+  </div>
+</div>

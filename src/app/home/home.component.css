@@ -1,0 +1,13 @@
+
+
+.home-date{
+    padding-top:78px;
+}
+
+
+@media(max-width:640px){
+    .home-date{
+        padding-top:0px;
+    }
+
+}

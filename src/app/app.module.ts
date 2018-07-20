@@ -41,7 +41,9 @@ export function EventServiceFactory(provider: EventsService) {
     HttpModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    EventsModule,
+    SharedModule
   ],
   providers: [EventsService, EventRouteGuard,
     { provide: APP_INITIALIZER, useFactory: EventServiceFactory, deps: [EventsService], multi: true }],

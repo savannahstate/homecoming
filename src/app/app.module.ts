@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
@@ -39,11 +39,9 @@ export function EventServiceFactory(provider: EventsService) {
     BrowserModule,
     AppRoutingModule,
     HttpModule,
-    FormsModule,
     HttpClientModule,
-    EventsModule,
-    SharedModule
-    
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [EventsService, EventRouteGuard,
     { provide: APP_INITIALIZER, useFactory: EventServiceFactory, deps: [EventsService], multi: true }],

@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'football', pathMatch: 'full', redirectTo: 'event/Homecoming%20Football%20Game' },
   { path: 'parade', pathMatch: 'full', redirectTo: 'event/Homecoming%20Parade' },
   { path: 'contact', component: ContactComponent, data: { title: 'Contact' } },
+  { path: 'golf', pathMatch: 'full', redirectTo: 'event/Scholarship%20Golf%20Scramble' },
   { path: 'event/:name', component: EventDetailsComponent, canActivate: [EventRouteGuard] },
   { path: 'events', component: EventsComponent, data: { title: 'Events' } },
   { path: 'error', component: ErrorComponent }

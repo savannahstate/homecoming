@@ -66,6 +66,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.eventTotal = this.eventServices.getTotalEvents();
-    this.eventServices.getEvents(4).subscribe(events => {this.events = events; });
+    this.eventServices.getEvents(3).subscribe(events => {this.events = events; });
   }
 }

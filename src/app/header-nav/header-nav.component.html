@@ -1,34 +1,41 @@
-<div class="nav-container">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-              <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="/home">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="/football">Football</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="/parade">Parade</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="/coronation">Coronation</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="/events">Events</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="https://www.bkstr.com/savannahstatestore/home">Bookstore</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="/contact">Contact</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <app-search></app-search>
-            </div>
-        </div>
-    </div>
-</div>
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">SSU</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/football" routerLinkActive="active">Football</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/parade" routerLinkActive="active">Parade</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/coronation" routerLinkActive="active">Coronation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/golf" routerLinkActive="active">Golf</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/events" routerLinkActive="active">Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" target="_blank" href="https://www.bkstr.com/savannahstatestore/home">Store</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+
+      <app-search></app-search>
+
+
+      
+    </form>
+  </div>
+</nav>

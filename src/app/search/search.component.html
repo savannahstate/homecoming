@@ -1,8 +1,10 @@
-<div>
+<div class="form-inline my-2 my-lg-0">
   <form autocomplete="off" #searchForm="ngForm" (ngSubmit)="search(searchForm.value)">
-    <input type="text" id="searchTerm" (ngModel)="searchTerm" name="searchTerm" placeholder="Search" />
+    <div class="form-group">
+      <input type="text" id="searchTerm" (ngModel)="searchTerm" name="searchTerm" placeholder="Search" class="form-control" aria-label="Search" />
+    </div>
   </form>
-  <div >
+  <div id="searchResults" >
     <p *ngFor="let result of searchResults">
       <a (click)="navigate(result.name)">{{result.name}}</a>
     </p>

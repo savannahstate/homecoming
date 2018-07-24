@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container main-content">
   <div class="row">
     <div class="col-12">
       <h1>Contact Us</h1>
@@ -9,23 +9,23 @@
         <div class="form-group">    
           <label for="name-input">Name:</label>
           <input type="text" class="form-control" [formControl]="contactForm.controls['name']" [class.error]="!contactForm.controls['name'].valid" autocomplete="name">
-          <div class="error-message" *ngIf="!contactForm.controls['name'].valid">Please type your name</div>
+          <div class="error-message" *ngIf="!contactForm.controls['name'].valid && contactForm.controls['name'].touched">Please type your name</div>
         
           <label for="email-input">Email:</label>
           <input type="email" class="form-control" [formControl]="contactForm.controls['email']" [class.error]="!contactForm.controls['email'].valid" autocomplete="email">
-          <div class="error-message" *ngIf="!contactForm.controls['email'].valid">Please provide a valid email (email@something.com)</div>
+          <div class="error-message" *ngIf="!contactForm.controls['email'].valid && contactForm.controls['email'].touched">Please provide a valid email (email@something.com)</div>
         
           <label for="phone-input">Phone:</label>
           <input type="tel" class="form-control" [formControl]="contactForm.controls['phone']" [class.error]="!contactForm.controls['phone'].valid" autocomplete="phone">
-          <div class="error-message" *ngIf="!contactForm.controls['phone'].valid">Please provide a valid phone number (111-222-3333)
+          <div class="error-message" *ngIf="!contactForm.controls['phone'].valid && contactForm.controls['phone'].touched">Please provide a valid phone number (111-222-3333)
           </div>
       
           <label for="message">Message:</label>
           <textarea type="text" class="form-control" rows="2" cols="50" [formControl]="contactForm.controls['message']" [class.error]="!contactForm.controls['message'].valid"></textarea>
-          <div class="error-message" *ngIf="!contactForm.controls['message'].valid">Describe your issue:</div>
+          <div class="error-message" *ngIf="!contactForm.controls['message'].valid && contactForm.controls['message'].touched">Describe your issue:</div>
         </div>
 
-        <button type="submit" id="contact-submit" class="btn" *ngIf="contactForm.valid"><strong>Send</strong></button>
+        <button type="submit" id="contact-submit" class="btn" [disabled]="contactForm.invalid"><strong>Send</strong></button>
       </form>
 
     

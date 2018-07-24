@@ -1,16 +1,25 @@
-<div *ngIf="_event$ | async as _event">
-    <img width="100%" />
+<div >
+    
     <div class="container main-content">
+      <div class="row">
+        <div class="col-md-12">
+          <img *ngIf="_event?.images" width="100%" src="{{_event?.images[0].src}}" style="padding-bottom:15px;" />
+        </div>
+      </div>
         <div class="row">
             <div class="col-md-9" style="padding-bottom:30px;">
                 <h1>{{_event?.name}}</h1>
                 <p>{{_event?.description}}</p>
                 <p><strong>Audience : </strong>{{_event?.audience}}</p>
                 <p>{{_event?.additional}}</p>
-                <p *ngFor="let link of _event.links">
+                <div style="margin-top:4rem;margin-bottom:4rem;">
+                  <h2>More Info</h2>
+                  <span *ngFor="let link of _event.links">
                     <a class="call-to-action" href="{{link.url}}">{{link.text}}</a>
-                </p>
-                <p *ngFor="let contact of _event.contacts">{{contact.name}} - {{contact.info}}</p>
+                  </span>
+                </div>
+              <h2 *ngIf="_event.contacts">Contact Info</h2>
+                <p *ngFor="let contact of _event.contacts">{{contact.type}} - {{contact.info}}</p>
             </div>
             <div class="col-md-3">
               <div class="calendarItem" style="margin-bottom:15px;">
@@ -22,20 +31,23 @@
                   <h4>{{_event?.dateStart | date:'h:mm a'}}<span *ngIf="_event?.dateEnd"> - </span>{{_event?.dateEnd | date:'h:mm a'}}</h4>
                 </div>
               </div>
-              <strong>PRICES</strong>
+              <h2>Prices</h2>
               <p *ngFor="let price of _event.prices">
                 {{price.amount | currency:USD}} - {{price.description}}
               </p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <p>
-                    <strong>{{_event?.location?.name}}</strong>
-                    <br/> {{_event?.location?.address}}
-                </p>
+            <div class="col-md-3">
+              <h2>Location</h2>
+              <p>
+                <strong>{{_event?.location?.name}}</strong>
+                <br /> {{_event?.location?.address}}
+                <br *ngIf="_event?.location?.address2" /> {{_event?.location?.address2}}
+                <br /> {{_event?.location?.city}}, {{_event?.location?.state}} {{_event?.location?.zip}}
+              </p>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <agm-map *ngIf="_event?.location?.latitude" [latitude]="_event?.location?.latitude" [longitude]="_event?.location?.longitude"
                     [zoom]="18">
                     <agm-marker [latitude]="_event?.location?.latitude" [longitude]="_event?.location?.longitude"></agm-marker>

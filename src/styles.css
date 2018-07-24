@@ -5,7 +5,13 @@ body {
   background-image: url("/assets/images/blurry-cheerleader.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 2rem;
 }
+
+.starter-template {
+  padding: 3rem 0rem;
+}
+
 
 .extraLgText{
     font-size: 3.5rem;
@@ -16,7 +22,7 @@ body {
 }
 
 .main-content {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.75);
   padding-top:15px;
   padding-bottom:15px;
   margin-top:15px;
@@ -62,3 +68,19 @@ footer {
   padding-top: 20px;
   padding-bottom: 50px;
 }
+
+#searchResults {
+  background-color:#fff;
+  color:#000;
+  z-index:99;
+  top:50px;
+  width:500px;
+  right:10px;
+  position:absolute;
+}
+
+  #searchResults p {
+    padding: 1rem 2rem;
+    margin-bottom:0;
+    border-bottom: solid 1px;
+  }

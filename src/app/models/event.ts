@@ -5,10 +5,14 @@ export interface IEvent {
     dateEnd?: Date;
     description: string;
     location?: {
-        name: string;
-        address: string;
-        latitude: number;
-        longitude: number;
+      name: string;
+      address: string;
+      address2?:string;
+      city: string;
+      state: string;
+      zip: string;
+      latitude: number;
+      longitude: number;
     };
     audience?: string;
     prices?: IPrice[];

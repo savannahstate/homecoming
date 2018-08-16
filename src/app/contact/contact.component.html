@@ -2,46 +2,26 @@
   <div class="row">
     <div class="col-12">
       <h1>Contact Us</h1>
-      <form id="contact-form" 
-          [formGroup]="contactForm" 
-          (ngSubmit)="onSubmit(contactForm.value)">
-
-        <div class="form-group">    
-          <label for="name-input">Name:</label>
-          <input type="text" class="form-control" [formControl]="contactForm.controls['name']" [class.error]="!contactForm.controls['name'].valid" autocomplete="name">
-          <div class="error-message" *ngIf="!contactForm.controls['name'].valid && contactForm.controls['name'].touched">Please type your name</div>
-        
-          <label for="email-input">Email:</label>
-          <input type="email" class="form-control" [formControl]="contactForm.controls['email']" [class.error]="!contactForm.controls['email'].valid" autocomplete="email">
-          <div class="error-message" *ngIf="!contactForm.controls['email'].valid && contactForm.controls['email'].touched">Please provide a valid email (email@something.com)</div>
-        
-          <label for="phone-input">Phone:</label>
-          <input type="tel" class="form-control" [formControl]="contactForm.controls['phone']" [class.error]="!contactForm.controls['phone'].valid" autocomplete="phone">
-          <div class="error-message" *ngIf="!contactForm.controls['phone'].valid && contactForm.controls['phone'].touched">Please provide a valid phone number (111-222-3333)
-          </div>
       
-          <label for="message">Message:</label>
-          <textarea type="text" class="form-control" rows="2" cols="50" [formControl]="contactForm.controls['message']" [class.error]="!contactForm.controls['message'].valid"></textarea>
-          <div class="error-message" *ngIf="!contactForm.controls['message'].valid && contactForm.controls['message'].touched">Describe your issue:</div>
-        </div>
+        <p>
+          3219 College St<br>
+          Savannah, Ga 31404<br>
+          Tel: 912.358.4SSU (4778)<br>
+          <a href="mailto:homecoming@savannahstate.edu">homecoming@savannahstate.edu</a>
+        </p>
+        <p>
+          <a href="http://www.savannahstate.edu/social-media/">Follow Us On Social Media</a>
+        </p>
 
-        <button type="submit" id="contact-submit" class="btn" [disabled]="contactForm.invalid"><strong>Send</strong></button>
-      </form>
-
-    
-    <!--<div *ngIf="received" class="mail-message img-responsive">
-      <p>Thank you for sending your information.  <br>I will be in touch soon!</p>
-      <a href="/home">Back to home page</a>
-    </div>
-    
-    <div *ngIf="error" class="mail-message img-responsive">
-      <p>There seems to be an issue with the email server.  Please try again soon.</p>
-      <a href="/home">Back to home page</a>
-    </div>-->
-
-
-
-
+        <b>Alumni Relations: </b> 912-358-3051<br>
+        <b>Athletics: </b> 912-358-3449<br>
+        <b>Campus Activities Board: </b> 912-358-3127<br>
+        <b>Football Game Tickets: </b> 912-358-3449/3429<br>
+        <b>Fundraising Events: </b> 912-358-3059<br>
+        <b>Parade: </b> 912-358-3132<br>
+        <b>SSUNAA: </b> <a href="mailto:newcam23@comcast.net">newcam23@comcast.net</a> or <a href="mailto:lcbwc@comcast.net">lcbwc@comcast.net</a><br>
+        <b>Tailgating/Vending: </b> 912-358-3449
+        
     </div>
   </div>
 </div>

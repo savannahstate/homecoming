@@ -3,8 +3,13 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\header-nav",
+    "\\src\\app\\home",
+    "\\src\\app\\search",
+    "\\src\\app\\services",
+    "\\src\\assets",
     "\\src\\assets\\js"
   ],
-  "SelectedNode": "\\src\\app\\app.module.ts",
+  "SelectedNode": "\\src\\assets\\js\\events.json",
   "PreviewInSolutionExplorer": false
 }
